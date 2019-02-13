@@ -1,0 +1,22 @@
+*{margin: 0;padding: 0;}
+body{
+	font-family: sans-serif;
+}
+.breathing-space{
+	margin: 10px 0 !important;
+}
+.default-padd{
+	padding: 10px 15px !important;
+}
+.remove-padd{
+	padding: 0px !important;
+}
+.remove-padd-left{
+	padding-left: 0px !important;
+}
+.remove-padd-right{
+	padding-right: 0px !important;
+}
+.main-labels{
+	line-height: 30px !important;
+}

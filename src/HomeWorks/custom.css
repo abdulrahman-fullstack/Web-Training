@@ -1,0 +1,41 @@
+.padd-me{
+  padding: 30px;
+  margin: 15px;
+}
+body{
+  background: rgba(0, 0, 0, 0.03)
+}
+.login-container{
+  margin-top: 100px;
+  width: 60%;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .06);
+}
+.login-container .Login-caption{
+  color: #7c799f !important;
+  font-size: 3em;
+}
+.input-fields-container{
+  margin: 40px 0;
+}
+.input-fields-container input , select{
+  width: 100%;
+  height: auto !important; 
+  font-size: 1.5em !important;
+  color: #575575 !important;
+  padding: 7px !important;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .08);
+}
+.input-fields-container select{
+  border-radius: 0px !important;
+}
+.input-fields-container .action-buttons{
+  width: 70% !important;
+  border: none;
+  transition: all .3s;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .2) !important;
+  font-size: 1.7em;
+}
