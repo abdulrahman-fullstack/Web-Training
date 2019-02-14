@@ -39,18 +39,18 @@ body{
 	color: #6b7175;
 	background-color: #edf1f2;
 }
+.bg-dark{
+	font-family: inherit;	
+	color: #a6a8b1; 
+	color: #c1c3c9 !important;
+	background-color: #3a3f51;
+}
 .bg-white{
 	color: #6b7175;
 	background-color: #fff;
 }
 .box-shadow{
 	box-shadow: 0 2px 2px rgba(0,0,0,0.05),0 1px 0 rgba(0,0,0,0.05);
-}
-.bg-dark{
-	font-family: inherit;	
-	color: #a6a8b1; 
-	color: #c1c3c9 !important;
-	background-color: #3a3f51;
 }
 .bg-dark .elem{
 	padding: 10px 30px;
@@ -109,45 +109,66 @@ body{
 
 /*		tabs design	starts here		*/
 
-a{text-decoration: none;}
-.tab-page-wrapper{
+.main-content .tab-page-wrapper{
+	position: relative;
 	display: flex;
 }
-.tab-page-wrapper > div > a{
-	margin: 0 15px;
-	padding: 5px;
-	display: inline-block;
-	background: rgba(0, 0, 0, .5);
+.main-content .tab-page-wrapper input{
+	display: none;
+}
+.main-content .tab-page-Tab-header:checked ~ div{
+	opacity: 1 !important;
+	transition-delay: .2s;
+}
+.main-content .tab-page-Tab-header:checked + label{
+	background: skyblue;
 	color: white;
 }
-.tab-page-wrapper > div > div{
-	width: 350px;
-	height: 100px;
-	display: none;
+.main-content .tab-page-wrapper label{
+	position: relative;
+	display: inline-block;
+	padding: 5px;
+	margin: 0 10px;
+	background: rgba(0, 0, 0, 0.2);
+	text-decoration: none;
+	transition: all .2s;
+}
+.main-content .tab-page-wrapper div:first-child::after{
+	content: '';
 	position: absolute;
-	left: 15px;
-	background: rgb(211, 211, 211);
+	top: 100%;
+	left: 10px;
+	width: 250px;
+	height: 80px;
+	background: rgba(0, 0, 0, .1);
+	z-index: -1;
 }
-.tab-page-wrapper > .tab-page-tab1 > .tab-page-content1{
-	display: block;
+.main-content .tab-page-wrapper label:hover {
+	background: skyblue;
+	color: white;
 }
-.tab-page-wrapper > div > a:active + div {
-	display: block;
+.main-content .tab-page-wrapper > div > div{
+	opacity: 0;
+	position: absolute;
+	left: 10px;
+	padding: 10px;
+	transition: all .2s;
 }
 
 /*		tabs design	ends here	*/
 
-/*		Login Page design starts here		*/
+
+/*	 	Login Page design starts here			*/
 
 .padd-me{
 	padding: 30px;
 	margin: 15px;
  }
  body{
-	background: rgba(0, 0, 0, 0.03);
+	background: rgba(0, 0, 0, 0.03)
  }
  .login-container{
-	/* margin-top: 100px; */
+	margin-top: 50px;
 	width: 80%;
 	background: white;
 	border-radius: 5px;
@@ -181,4 +202,4 @@ a{text-decoration: none;}
 	font-size: 1.7em;
  }
 
- /*	Login Page design ends here		*/
+/*		Login Page design ends here		*/

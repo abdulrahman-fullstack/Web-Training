@@ -47,7 +47,7 @@ var divisionHTML = divisionjson.map( elem => '<option value="'+elem.division+'">
 $('#division-select').append(divisionHTML);
 
 $('#division-select').on('change' , function(){
-	var selectedSection = sectionJson.find(elem => elem.division === $(this).val());
-	var sectionHTML = selectedSection.sections.map( elem => '<option value="'+elem+'">'+elem+'</option>' )
+	var selectedDivision = sectionJson.find(elem => elem.division === $(this).val());
+	var sectionHTML = selectedDivision.sections.map( elem => '<option value="'+elem+'">'+elem+'</option>' )
 	$('#section-select').html("<option value=''></option>"+sectionHTML);	
 });

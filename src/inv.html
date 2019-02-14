@@ -1,59 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Icube - Bootstrap Theming</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../libs/bootstrap/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" href="./css/inv.css">
-	<title>Inventory Group</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="./css/inv.css" />
+
 </head>
+
 <body>
-	<div class="container-fluid">
-		<div class="jumbotron default-padd breathing-space">
+	<div class="container-fluid jumbo-me  ">
+		<div class="jumbotron default-padd">
 			<div class="row">
-				<div class="col-md-6 form-group">
-					<div class="row default-padd">
-						<div class="col-md-3 main-labels">
-							<label for="">Division : </label>
+					<h3 class="group-title">Item Details</h3>
+					<hr />
+				<div class="col-md-8">
+					<div class="form-group">
+						<div class="row vertical-me">
+							<div class="col-md-2 form-label"> <label for="sel1">Division : </label> </div>
+							<div class="col-md-10"> <select class="form-control" id="division-select">
+								<option value="" disabled selected>Division</option>
+								</select>
+							</div>
 						</div>
-						<div class="col-md-9 remove-padd">
-							<select name="" id="division-select" class="form-control">
-								<option value="" disabled selected></option>
-							</select>
+						<div class="row vertical-me">
+							<div class="col-md-2 form-label"> <label for="sel1">Section : </label> </div>
+							<div class="col-md-10"> <select class="form-control" id="section-select">
+									<option value="" disabled selected>Section</option>
+								</select>
+							</div>
 						</div>
-					</div>
-					<div class="row default-padd">
-						<div class="col-md-3 main-labels">
-							<label for="">Section : </label>
-						</div>
-						<div class="col-md-9 remove-padd">
-							<select name="" id="section-select" class="form-control">
-								<option value="" disabled selected></option>
-							</select>
-						</div>
-					</div>
-					<div class="row default-padd">
-						<div class="col-md-3 main-labels">
-							<label for="">Department : </label>
-						</div>
-						<div class="col-md-5 remove-padd">
-							<input type="text" class="form-control department-input" placeholder="Department">
-						</div>
-						<div class="col-md-4 remove-padd-right">
-							<input type="text" class="form-control department-input" placeholder="Alias">
+						<div class="row vertical-me">
+							<div class="col-md-2 form-label"> <label for="sel1">Department : </label> </div>
+							<div class="col-md-6">
+								<input type="text" class="form-control" placeholder="Department" />
+							</div>
+							<div class="col-md-1 form-label"> <label for="sel1">Alias : </label> </div>
+							<div class="col-md-3">
+								<input type="text" class="form-control" placeholder="Alias Name" />
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
+			</div>
+			<div class="col-md-8">
 
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8">
+				<div class="panel with-nav-tabs panel-info">
+					<div class="panel-heading">
+						<ul class="nav nav-tabs">
+							<li class="active"><a href="#tab1info" data-toggle="tab">Allocation</a></li>
+							<li><a href="#tab2info" data-toggle="tab">Additonal</a></li>
+							<li><a href="#tab3info" data-toggle="tab">Default</a></li>
+						</ul>
+					</div>
+					<div class="panel-body">
+						<div class="tab-content">
+							<div class="tab-pane fade in active" id="tab1info">
+								<div class="form-group">
+									<div class="row vertical-me">
+										<div class="col-md-4"> <label for="sel1">POS Images: </label> </div>
+										<div class="col-md-5"> <select class="form-control" id="sel1">
+												<option>Trousers</option>
+												<option>Shirt</option>
+												<option>Pants</option>
+												<option>Vests & Briefs</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="tab2info">Info 2</div>
+							<div class="tab-pane fade" id="tab3info">Info 3</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+
 	</div>
+	<script src="../libs/jquery/jquery-3.3.1.min.js"></script>
+	<script src="../libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./js/inv.js"></script>
 </body>
-<script src="../libs/jquery/jquery-3.3.1.min.js"></script>
-<script src="../libs/bootstrap/js/bootstrap.min.js"></script>
-<script src="./js/inv.js"></script>
+
 </html>
