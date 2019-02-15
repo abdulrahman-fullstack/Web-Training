@@ -8,6 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../libs/bootstrap/css/bootstrap-multiselect.css">
 	<link rel="stylesheet" type="text/css" media="screen" href="./css/inv.css" />
 
 </head>
@@ -21,15 +22,15 @@
 				<div class="col-md-8">
 					<div class="form-group">
 						<div class="row vertical-me">
-							<div class="col-md-2 form-label"> <label for="sel1">Division : </label> </div>
-							<div class="col-md-10"> 
+							<div class="col-md-2 form-label"> <label>Division</label> </div>
+							<div class="col-md-10">
 								<select class="form-control" id="division-select">
 									<option value="" disabled selected>Division</option>
 								</select>
 							</div>
 						</div>
 						<div class="row vertical-me">
-							<div class="col-md-2 form-label"> <label for="sel1">Section : </label> </div>
+							<div class="col-md-2 form-label"> <label>Section</label> </div>
 							<div class="col-md-10">
 								<select class="form-control" id="section-select">
 									<option value="" disabled selected>Section</option>
@@ -37,11 +38,11 @@
 							</div>
 						</div>
 						<div class="row vertical-me">
-							<div class="col-md-2 form-label"> <label for="sel1">Department : </label> </div>
+							<div class="col-md-2 form-label"> <label>Department</label> </div>
 							<div class="col-md-6">
 								<input type="text" class="form-control" placeholder="Department" />
 							</div>
-							<div class="col-md-1 form-label"> <label for="sel1">Alias : </label> </div>
+							<div class="col-md-1 form-label"> <label>Alias</label> </div>
 							<div class="col-md-3">
 								<input type="text" class="form-control" placeholder="Alias Name" />
 							</div>
@@ -68,9 +69,58 @@
 							<div class="tab-pane fade in active" id="tab1info">
 								<div class="form-group">
 									<div class="row vertical-me">
-										<div class="col-md-4"> <label for="sel1">POS Images: </label> </div>
-										<div class="col-md-5"> 
+										<div class="col-md-2">
+											<label class="form-label">POS Images</label>
+										</div>
+										<div class="col-md-1"></div>
+										<div class="col-md-3">
 											<input type="file" class="form-control">
+										</div>
+										<div class="col-md-3">
+											<input type="file" class="form-control">
+										</div>
+										<div class="col-md-3">
+											<input type="file" class="form-control">
+										</div>
+									</div>
+									<div class="row vertical-me">
+										<div class="col-md-2"><label class="form-label">UOM</label></div>
+										<div class="col-md-1"></div>
+										<div class="col-md-3">
+											<div class="row">
+												<div class="col-md-6">
+													<input type="radio" name="uom-type" id="uom-type-single">
+													<label for="uom-type-single" class="form-label">Single</label>
+												</div>
+												<div class="col-md-6">
+													<input type="radio" name="uom-type" id="uom-type-multiple">
+													<label for="uom-type-multiple" class="form-label">Multiple</label>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="row">
+												<i class="glyphicon glyphicon-plus-sign icon-md form-label col-md-2"></i>
+												<div class="col-md-10">
+													<input type="text" class="form-control" value="1.00">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<select name="" id="uom-select" class="form-control">
+												<option value="PCS">PCS</option>
+												<option value="MTRS">MTRS</option>
+											</select>
+										</div>
+									</div>
+									<div class="row vertical-me">
+										<div class="col-md-3">
+											<label for="" class="form-label">Required Categories</label>
+										</div>
+										<div class="col-md-9">
+											<select name="" id="" class="form-control">
+												<option value=""></option>
+											</select>
 										</div>
 									</div>
 								</div>
@@ -86,6 +136,7 @@
 	</div>
 	<script src="../libs/jquery/jquery-3.3.1.min.js"></script>
 	<script src="../libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../libs/bootstrap/js/bootstrap-multiselect.min.js"></script>
 	<script src="./js/inv.js"></script>
 </body>
 
