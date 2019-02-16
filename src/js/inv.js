@@ -1,22 +1,17 @@
 var divisionjson = [
 	{
-		"id": 1,
 		"division": "Mens"
 	},
 	{
-		"id": 2,
 		"division": "Ladies"
 	},
 	{
-		"id": 3,
 		"division": "Kids"
 	},
 	{
-		"id": 4,
 		"division": "Boys"
 	},
 	{
-		"id": 5,
 		"division": "Girls"
 	},
 ];
@@ -43,11 +38,13 @@ var sectionJson = [
 	}
 ]
 
-var divisionHTML = divisionjson.map( elem => '<option value="'+elem.division+'">'+elem.division+'</option> ' );
+var divisionHTML = divisionjson.map( elem => `<option value="${elem.division}">${elem.division}</option>`);
 $('#division-select').append(divisionHTML);
 
 $('#division-select').on('change' , function(){
 	var selectedDivision = sectionJson.find(elem => elem.division === $(this).val());
-	var sectionHTML = selectedDivision.sections.map( elem => '<option value="'+elem+'">'+elem+'</option>' )
-	$('#section-select').html("<option value=''></option>"+sectionHTML);	
+	var sectionHTML = selectedDivision.sections.map( elem => `<option value="${elem}">${elem}</option>` )
+	$('#section-select').html("<option value=''></option>"+sectionHTML);
 });
+
+// $('#uom-select').multiselect();
